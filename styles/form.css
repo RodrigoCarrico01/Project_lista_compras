@@ -113,6 +113,12 @@ form{
       flex-direction: row;
       align-items: center;
       color: var(--always-white);
+      & .close-alert{
+        display: flex;
+        align-items: center;
+        background-color: var(--color-danger);
+        margin-left: auto;
+      }
     }
 }
 

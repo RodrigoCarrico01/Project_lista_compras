@@ -1,7 +1,6 @@
 const form = document.querySelector("form")
 const input = document.getElementById("addItem")
 const itemArea = document.getElementById("items-list")
-const alertBox = document.querySelector(".warning")
 
 
 form.addEventListener("click", (event)=>{
@@ -20,12 +19,7 @@ form.addEventListener("click", (event)=>{
       console.log(checkbox)
       if (checkbox && checkbox.checked){
         item.remove()
-        alertBox.classList.remove("warning")
-        setTimeout(() => {
-          alertBox.classList.add("warning")
-        }, 5000)
-
-
+        deleteAlert()
       }else {
         
         alert("Marca o item antes de eliminar!")
@@ -70,3 +64,46 @@ function createItem(itemName){
   } 
 }
 
+function deleteAlert(){
+  try{
+    const newAlert = document.createElement("div")
+    const newAlertWarningImg = document.createElement("img")
+    const newAlertP = document.createElement("p")
+    const newAlertButton = document.createElement("button")
+    const newAlertXImg = document.createElement("img")
+
+    newAlert.classList.add("remove-alert")
+    
+    newAlertWarningImg.src = "assets/icons/warning.svg"
+
+    newAlertP.textContent = "O item foi removido da lista"
+
+    newAlertButton.type = "button"
+    newAlertButton.classList.add("close-alert")
+
+    newAlertXImg.src = "assets/icons/x.svg"
+
+    newAlertButton.appendChild(newAlertXImg)
+    newAlert.append(newAlertWarningImg, newAlertP, newAlertButton)
+    form.append(newAlert)
+
+    newAlertButton.addEventListener("click", () => {
+      newAlert.remove()
+    })
+    setTimeout(() => {
+      newAlert.remove()
+    }, 7000)
+
+  } catch(error){
+    console.log(error)
+    alert("Erro?")
+  } 
+}
+
+/*        <div class="remove-alert">
+            <img src="assets/icons/warning.svg" alt="icon de alerta">
+            <p>O item foi removido da lista</p>
+            <button type="button" class="close-alert">
+              <img src="assets/icons/x.svg" alt="fechar o alert">
+            </button>
+        </div> */
