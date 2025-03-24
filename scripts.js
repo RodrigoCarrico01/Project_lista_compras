@@ -1,6 +1,7 @@
 const form = document.querySelector("form")
 const input = document.getElementById("addItem")
 const itemArea = document.getElementById("items-list")
+const alertBox = document.querySelector(".warning")
 
 
 form.addEventListener("click", (event)=>{
@@ -15,7 +16,14 @@ form.addEventListener("click", (event)=>{
       console.log(checkbox)
       if (checkbox && checkbox.checked){
         item.remove()
+        alertBox.classList.remove("warning")
+        setTimeout(() => {
+          alertBox.classList.add("warning")
+        }, 5000)
+
+
       }else {
+        
         alert("Marca o item antes de eliminar!")
       }
     }
