@@ -3,4 +3,28 @@
   max-width: var(--max-width);
   width: calc(100% - 22rem * 2);
   margin-inline: auto;
+  border: 1px solid red;
+}
+
+a img{
+  width: 1rem;
+  height: 1rem;
+}
+
+.desktop-only{
+  display: initial;
+}
+
+
+@media (width <= 70em){
+  .container{
+    --max-width: 375px
+    max-width: var(--max-width);
+    width: calc(100% - 2rem * 2);
+    margin-inline: auto;
+  }
+  .desktop-only{
+    display: none;
+  }
+  
 }

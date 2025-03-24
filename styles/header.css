@@ -1,0 +1,29 @@
+header{
+  & .logo{
+    padding-top: 1.5rem;
+    padding-bottom: 3.875rem;
+    display: flex;
+    justify-content: center;
+  }
+  & a{
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+  }
+  & h1{
+    padding-bottom: 2.75rem;
+  }
+}
+
+
+
+@media (width <= 70em){
+  header{
+    & .logo{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

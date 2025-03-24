@@ -34,10 +34,23 @@ html{
   font-family: var(--ff-sans);
   font-weight: var(--fw-medium);
   font-size: var(--fs-base);
-  line-height: 1.25;
+  line-height: 1.25rem;
   letter-spacing: 0;
-  color: var(--content-primary);
+  color: var(--content-secondary);
 }
 body{
   background-color: var(--background-primary);
+}
+h1{
+  line-height: 2rem;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+  color: var(--content-primary);
+}
+img{
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+  color: inherit;
 }
