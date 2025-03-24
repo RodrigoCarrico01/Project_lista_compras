@@ -4,13 +4,17 @@ const itemArea = document.getElementById("items-list")
 
 form.addEventListener("submit",(event) => {
   event.preventDefault()
-  let item = input.value
-  createItem(item)
+  let itemName = input.value
+  createItem(itemName)
 })
 
-function createItem(item){
+
+function createItem(itemName){
   try{
-    let text = item
+    let text = itemName
+    
+    const safeId = itemName.toLowerCase().replace(/\s+/g, "-") + "-" + Date.now()
+
     const newItem = document.createElement("li")
     const newItemLabel = document.createElement("label")
     const newItemInput = document.createElement("input")
@@ -18,11 +22,17 @@ function createItem(item){
     const newItemDeleteImage = document.createElement("img")
   
     newItem.classList.add("item")
+    
     newItemDeleteButton.classList.add("btn-delete")
-    newItemDeleteImage.src = "assets/icons/remove.svg"
-    newItemLabel.textContent = text
     newItemDeleteButton.type = "reset"
+
+    newItemDeleteImage.src = "assets/icons/remove.svg"
+
+    newItemLabel.setAttribute("for", safeId)
+    newItemLabel.textContent = text
+
     newItemInput.type = "checkbox"
+    newItemInput.id = safeId
 
     newItemDeleteButton.appendChild(newItemDeleteImage)
     newItemLabel.prepend(newItemInput)
@@ -37,7 +47,7 @@ function createItem(item){
 
 /*
 Eu quero:
-1. Capturar o que a pessoa escreve no input
-2. Usar o que a pessoa escreve para criar um item
-3. 
+1. O Button delete apagar um item
+2. aparecer o aviso durante 5s
+
 */ 

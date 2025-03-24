@@ -14,7 +14,9 @@ a img{
 .desktop-only{
   display: initial;
 }
-
+.warning{
+  display: none;
+}
 
 @media (width <= 70em){
   .container{
