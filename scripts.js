@@ -6,6 +6,7 @@ const itemArea = document.getElementById("items-list")
 form.addEventListener("click", (event)=>{
   if(event.target.type === "submit")
   {
+    event.preventDefault()
     let itemName = input.value
     if(itemName === ""){
         return
@@ -13,6 +14,7 @@ form.addEventListener("click", (event)=>{
     createItem(itemName)
   } 
   if (event.target.type === "reset" || event.target.tagName === "IMG"){
+    event.preventDefault()
     const item = event.target.closest("li")
     if (item) {
       const checkbox = item.querySelector('input[type="checkbox"]')
