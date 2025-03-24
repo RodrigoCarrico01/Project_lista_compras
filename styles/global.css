@@ -57,3 +57,7 @@ a{
 ul[role="list"]{
   list-style: none;
 }
+
+input, button{
+  border-style: none;
+}
