@@ -5,8 +5,12 @@ const alertBox = document.querySelector(".warning")
 
 
 form.addEventListener("click", (event)=>{
-  if(event.target.type === "submit"){
+  if(event.target.type === "submit")
+  {
     let itemName = input.value
+    if(itemName === ""){
+        return
+    }
     createItem(itemName)
   } 
   if (event.target.type === "reset" || event.target.tagName === "IMG"){
