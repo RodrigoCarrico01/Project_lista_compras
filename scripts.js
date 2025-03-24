@@ -2,12 +2,26 @@ const form = document.querySelector("form")
 const input = document.getElementById("addItem")
 const itemArea = document.getElementById("items-list")
 
-form.addEventListener("submit",(event) => {
-  event.preventDefault()
-  let itemName = input.value
-  createItem(itemName)
-})
 
+form.addEventListener("click", (event)=>{
+  if(event.target.type === "submit"){
+    let itemName = input.value
+    createItem(itemName)
+  } 
+  if (event.target.type === "reset" || event.target.tagName === "IMG"){
+    const item = event.target.closest("li")
+    if (item) {
+      const checkbox = item.querySelector('input[type="checkbox"]')
+      console.log(checkbox)
+      if (checkbox && checkbox.checked){
+        item.remove()
+      }else {
+        alert("Marca o item antes de eliminar!")
+      }
+    }
+  }
+
+})
 
 function createItem(itemName){
   try{
@@ -32,7 +46,6 @@ function createItem(itemName){
     newItemLabel.textContent = text
 
     newItemInput.type = "checkbox"
-    newItemInput.id = safeId
 
     newItemDeleteButton.appendChild(newItemDeleteImage)
     newItemLabel.prepend(newItemInput)
@@ -45,9 +58,3 @@ function createItem(itemName){
   } 
 }
 
-/*
-Eu quero:
-1. O Button delete apagar um item
-2. aparecer o aviso durante 5s
-
-*/ 
