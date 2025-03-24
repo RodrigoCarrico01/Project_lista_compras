@@ -22,6 +22,36 @@
       <h1>Compras da semana</h1>
     </div>
   </header>
+  <main>
+    <div class="container">
+      <form>
+        <div class="add-item">
+          <input type="text">
+          <button>Adicionar Item</button>
+        </div>
+        <div class="items-wrapper">
+          <ul id="items-list" role="list">
+
+            <li class="item">
+              <label for="">
+                <input type="checkbox">
+                exemplo
+              </label>
+              <button class="btn-delete">
+                <img src="assets/icons/remove.svg" alt="icon de caixote do lixo">
+              </button>
+            </li>
+
+          </ul>
+        </div>
+        <div class="remove-alert">
+          <img src="assets/icons/warning.svg" alt="icon de alerta">
+          <p>O item foi removido da lista</p>
+        </div>
+        
+      </form>
+    </div>
+  </main>
   <script src="scripts.js"></script>
 </body>
 </html>
