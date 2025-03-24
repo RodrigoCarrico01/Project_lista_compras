@@ -3,8 +3,8 @@
   max-width: var(--max-width);
   width: calc(100% - 22rem * 2);
   margin-inline: auto;
-  border: 1px solid red;
 }
+
 
 a img{
   width: 1rem;
