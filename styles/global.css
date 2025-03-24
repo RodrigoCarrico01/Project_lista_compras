@@ -1,0 +1,31 @@
+*::before, *::after, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /*Palete*/
+  --background-primary: #F4F5FB;
+  --background-secondary: #FFFFFF;
+  --color-brand: #CA3884;
+  --color-brand-hover:#A52C6B;
+  --color-danger:#C93847 ;
+  --content-primary: #080B12;
+  --content-secondary: #374151;
+  --content-tertiary: #9CA3AF;
+  --always-white: #FFFFFF;
+  --border-primary: #D1D5DB;
+  --border-hover: #B9C2D0;
+
+  /*Tipografia*/
+  --ff-sans: "Inter", sans-serif;
+  
+  --fs-lg: 1.5rem;
+  --fs-base: 1rem;
+  --fs-sm: .875rem;
+
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-medium: 500;
+}
