@@ -113,6 +113,7 @@ form{
       flex-direction: row;
       align-items: center;
       color: var(--always-white);
+      margin-bottom: .5rem;
       & .close-alert{
         display: flex;
         align-items: center;
