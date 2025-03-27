@@ -83,7 +83,7 @@ function deleteAlert(){
     newAlertButton.type = "button"
     newAlertButton.classList.add("close-alert")
 
-    newAlertXImg.src = "assets/icons/x.svg"
+    newAlertXImg.src = "assets/icons/delete-small.svg"
 
     newAlertButton.appendChild(newAlertXImg)
     newAlert.append(newAlertWarningImg, newAlertP, newAlertButton)
