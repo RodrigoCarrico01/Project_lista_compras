@@ -1,5 +1,5 @@
 
-<h1 align="center"> Desafio Clube de Assinatura </h1>
+<h1 align="center"> Desafio Lista de Compras </h1>
 
 <p align="center">
 O Primeiro desafio da parte Javascript da trilha Full-Stack, promovido pela Rocketseat para ensino de tecnologias WEB.  <br/>
